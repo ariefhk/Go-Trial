@@ -402,5 +402,70 @@ func dayaTekananUsaha() {
 }
 
 func konversiSuhu() {
+	fmt.Println("=== Hitung Konversi Suhu ===")
+	fmt.Println("1).Konversi Celcius ")
+	fmt.Println("2).Konversi Reamur")
+	fmt.Println("3).Hitung Fahrenreit")
+	fmt.Println("4).Hitung Kelvin")
+	var operator int
+	fmt.Print("Masukkan pilihan: ")
+	fmt.Scan(&operator)
+	switch operator {
+	case 1:
+		var c float64
+		fmt.Println("=== Konversi Celcius ===")
+		fmt.Print("Masukkan Suhu Celcius: ")
+		fmt.Scan(&c)
 
+		reamur := c * (4 / 5)
+		kelvin := c + 273
+		fahrenreit := (c * (9 / 5)) + 32
+
+		fmt.Println("Reamur: ", reamur)
+		fmt.Println("Kelvin: ", kelvin)
+		fmt.Println("Fahrenreit: ", fahrenreit)
+		break
+	case 2:
+		var r float64
+		fmt.Println("=== Konversi Reamur ===")
+		fmt.Print("Masukkan Suhu Reamur: ")
+		fmt.Scan(&r)
+
+		celcius := r * (5 / 4)
+		kelvin := (r * (5 / 4)) + 273
+		fahrenreit := (r * (9 / 4)) + 32
+
+		fmt.Println("Reamur: ", celcius)
+		fmt.Println("Kelvin: ", kelvin)
+		fmt.Println("Fahrenreit: ", fahrenreit)
+		break
+	case 3:
+		var f float64
+		fmt.Println("=== Konversi Fahrenreit ===")
+		fmt.Print("Masukkan Suhu Fahrenreit: ")
+		fmt.Scan(&f)
+
+		celcius := (5 / 9) * (f - 32)
+		reamur := (4 / 9) * (f - 32)
+		kelvin := (5/9)*(f-32) + 273
+
+		fmt.Println("Celcius: ", celcius)
+		fmt.Println("Reamur: ", reamur)
+		fmt.Println("Kelvin: ", kelvin)
+		break
+	case 4:
+		var k float64
+		fmt.Println("=== Konversi Kelvin ===")
+		fmt.Print("Masukkan Suhu Kelvin: ")
+		fmt.Scan(&k)
+
+		celcius := k - 273
+		reamur := (4 / 5) * (k - 273)
+		fahrenreit := (9/5)*(k-273) + 32
+
+		fmt.Println("Celcius: ", celcius)
+		fmt.Println("Reamur: ", reamur)
+		fmt.Println("Fahrenreit: ", fahrenreit)
+		break
+	}
 }
